@@ -2,6 +2,7 @@
     "name": "medicarebd/hrm-module",
     "type": "laravel-module",
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Bishwajit Adhikary",
