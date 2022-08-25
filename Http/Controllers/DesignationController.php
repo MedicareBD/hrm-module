@@ -26,8 +26,8 @@ class DesignationController extends Controller
         ]);
 
         return response()->json([
-            'message' => __("Designation Created Successfully"),
-            'redirect' => route('admin.designations.index')
+            'message' => __('Designation Created Successfully'),
+            'redirect' => route('admin.designations.index'),
         ]);
     }
 
@@ -52,8 +52,8 @@ class DesignationController extends Controller
         ]);
 
         return response()->json([
-            'message' => __("Designation Updated Successfully"),
-            'redirect' => route('admin.designations.index')
+            'message' => __('Designation Updated Successfully'),
+            'redirect' => route('admin.designations.index'),
         ]);
     }
 
@@ -62,7 +62,7 @@ class DesignationController extends Controller
         $hrm->delete();
 
         return response()->json([
-            'message' => __("Designation Deleted Successfully"),
+            'message' => __('Designation Deleted Successfully'),
         ]);
     }
 }

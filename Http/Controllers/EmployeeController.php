@@ -26,8 +26,8 @@ class EmployeeController extends Controller
         ]);
 
         return response()->json([
-            'message' => __("Employee Created Successfully"),
-            'redirect' => route('admin.employees.index')
+            'message' => __('Employee Created Successfully'),
+            'redirect' => route('admin.employees.index'),
         ]);
     }
 
@@ -52,8 +52,8 @@ class EmployeeController extends Controller
         ]);
 
         return response()->json([
-            'message' => __("Employee Updated Successfully"),
-            'redirect' => route('admin.employees.index')
+            'message' => __('Employee Updated Successfully'),
+            'redirect' => route('admin.employees.index'),
         ]);
     }
 
@@ -62,7 +62,7 @@ class EmployeeController extends Controller
         $employees->delete();
 
         return response()->json([
-            'message' => __("Employee Deleted Successfully"),
+            'message' => __('Employee Deleted Successfully'),
         ]);
     }
 }

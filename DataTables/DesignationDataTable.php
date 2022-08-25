@@ -6,10 +6,7 @@ use App\Models\Designation;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
-use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
-use Yajra\DataTables\Html\Editor\Editor;
-use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
 class DesignationDataTable extends DataTable
@@ -18,7 +15,7 @@ class DesignationDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addIndexColumn()
-            ->editColumn('created_at', fn($model) => format_date($model->created_at))
+            ->editColumn('created_at', fn ($model) => format_date($model->created_at))
             ->addColumn('action', 'hrm::action')
             ->setRowId('id');
     }
@@ -55,7 +52,7 @@ class DesignationDataTable extends DataTable
                 ->orderable(false)
                 ->title('#'),
             //Column::make('name')->title(__("Name")),
-            Column::make('created_at')->title(__("Created At")),
+            Column::make('created_at')->title(__('Created At')),
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
@@ -68,6 +65,6 @@ class DesignationDataTable extends DataTable
 
     protected function filename(): string
     {
-        return 'Designations_' . date('YmdHis');
+        return 'Designations_'.date('YmdHis');
     }
 }
