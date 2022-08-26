@@ -10,9 +10,4 @@ class Employee extends Model
     use HasFactory;
 
     protected $fillable = [];
-
-    protected static function newFactory()
-    {
-        return \Modules\Hrm\Database\factories\EmployeeFactory::new();
-    }
 }
